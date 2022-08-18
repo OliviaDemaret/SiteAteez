@@ -11,13 +11,6 @@
   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 62px;
-}
-
 .navbar .nav-container li {
   list-style: none;
 }
@@ -54,7 +47,6 @@
 }
 
 .nav-container .hamburger-lines {
-  display: block;
   height: 26px;
   width: 32px;
   position: absolute;
@@ -235,15 +227,15 @@ body {
 }
 #hongjoong {
   position: relative;
-  bottom: 65px;
-
+  bottom: 60px;
+  left: 50px;
   z-index: 1;
   text-align: center;
 }
 
 #agroup {
   position: relative;
-  bottom: 99px;
+  bottom: 75px;
   right: 20px;
   text-align: center;
 }
@@ -264,6 +256,8 @@ h1 {
 @import "swiper/css/pagination";
 
 .swiper {
+  margin-top: 30px;
+  margin-bottom: 30px;
   width: 100%;
   height: auto;
 }
@@ -382,7 +376,198 @@ h2 {
   margin: 0px;
   padding: 0px;
   padding-top: 60px;
-  display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 801px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 60px;
+    width: 100%;
+  }
+
+  .nav-container .checkbox {
+    position: absolute;
+    display: none;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0%;
+  }
+
+  .nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+    opacity: 0%;
+  }
+
+  .nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+    opacity: 0%;
+  }
+
+  .nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+    opacity: 0%;
+  }
+
+  .nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+    opacity: 0%;
+  }
+  .nav-container .menu-items {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    top: 0px;
+    left: 400px;
+    padding-top: 0px;
+    width: auto;
+    transform: translate(0%) scaleY(1);
+  }
+
+  #haut {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 30px;
+    margin-bottom: 40px;
+  }
+  #histoire {
+    width: 30%;
+  }
+  #intro {
+    margin: 0px;
+    width: 60%;
+  }
+
+  #membersimage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    height: 300px;
+  }
+
+  .img {
+    height: 100px;
+  }
+
+  #mingi {
+    margin-top: 6px;
+  }
+
+  #hongjoong {
+    margin-top: 5px;
+    margin-left: 40px;
+  }
+
+  #agroup {
+    margin-top: -30px;
+    margin-left: 0px;
+  }
+
+  #groupmembers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    padding: 0px;
+    height: 300px;
+    width: 80%;
+  }
+
+  #memberstext {
+    margin: 30px;
+    padding: auto;
+    align-items: center;
+    text-align: right;
+    width: 50%;
+  }
+  #mingi {
+    position: relative;
+    justify-content: flex-start;
+  }
+  #hongjoong {
+    position: relative;
+    justify-content: flex-start;
+  }
+
+  #agroup {
+    position: relative;
+    justify-content: flex-start;
+  }
+
+  #dates {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: auto;
+    width: 1000px;
+  }
+  #concertdates {
+    margin: 10px;
+  }
+
+  #fanmeetingdates {
+    margin: 10px;
+  }
+  #footerr {
+    justify-content: space-between;
+    padding: auto;
+  }
+  #reseauxfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 0px;
+  }
+
+  #copyright {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #reseaux {
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+  }
 }
