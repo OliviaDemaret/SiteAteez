@@ -10,7 +10,13 @@
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    801: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
   }
-})
+  })
 }
  
